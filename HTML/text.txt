@@ -1,0 +1,95 @@
+HTML Document Structure
+Common HTML Elements
+HTML Forms
+Semantic HTML
+
+
+HTML 
+HYPERMARKUP LANGUAGE
+DOESNT THROWS ERROR 
+WHAT AN DEVELOPER GOING TO WRITE >> DIRECTLY DISPLAY
+STANDARD WEB PAGES >> HTML
+
+MATHEMATICS : 2+2 = 4
+ENGLISH : VOWEL/CONSONANTS
+
+filename.html
+entry file >> 1st file loads in the browser
+index.html >>1st file render
+navbar.html
+header.html
+footer.html 
+
+randomize
+
+abc.html , xyz.html , test.html >> after 6-7 months reworks >> add dome features 
+documenataion
+
+
+RULES
+
+TAG
+ELEMENT  >> inline element & block elements
+ATTRIBUTE  >> gives+ add additional info
+INBUILT PROPERTIES
+
+TAG 
+>> openning closing tag <tagname></tagname>
+<html></html> ||<head></head> ||<body>some content</body>
+
+>> self closing tag
+<meta/>
+<!DOCTYPE html> ||<meta>
+
+
+heading tags:
+h1 - h6
+<h1></h1> tag
+<h1>Some content</h1> element
+fontsize change
+font bold
+occupy entire width >> block level
+spacing top bottom >> margin
+
+inspect >> debugging
+
+paragraph tags
+<p>content</p>
+occupy entire width
+spacing top bottom >> margin
+
+self closing
+<tagname> OR <tagname/>
+image tag >>holds an image
+<img> OR <img/>
+
+<br>
+<br/>
+<hr>
+
+anchor tag >> navigation
+<a></a
+linking PAGES
+link the url
+open the url/page >> in the same page or in an another page
+inline element
+
+span tag
+
+bold      >>  <b></b>
+italic    >>  <i></i>
+underline >>  <u></u>
+
+FORMS:
+collection of data  >> type 
+
+input tag >> self closing
+
+form tag
+<form></form>
+
+
+
+
+
+
