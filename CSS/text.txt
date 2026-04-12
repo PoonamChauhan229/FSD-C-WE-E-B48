@@ -1,0 +1,67 @@
+CSS >>Cascading Style Sheets
+Paint >> u have colors ? No 
+Where need to paint / sheets/paper 
+
+HTML Structure
+
+Dress for a Party?
+clothes, shoes, makeup, accessorices
+HTML >>Body >> 
+CSS >> accessorices
+
+add color , spacing, position, layouts,fonts etc....
+responsive >> imp >> web devlopments >> mobile friendly 
+
+Apply the CSS/Types :
+INLINE CSS   
+    >> WITHIN IN THE LINE /CHARACTER/WORD/ELEMENT >> /CHARACTER/WORD/ELEMENT
+    >> STYLE ATTRIBUTE
+INTERNAL CSS 
+    >> fOR THE PAGE / INDEX.HTML >> ONLY FOR THAT PAGE
+    >>STYLE TAG
+EXTERNAL CSS >> SEPERATE FILE >> STYLE SHEETS >> APPLICABLE >> LINKING OF THE PAGE
+filename.css
+SELECTOR{
+    PROPERTY:VALUE
+}
+
+SELECTOR >> SELCECT THE ELEMENT
+TAG NAME >> div, p, a, span etc ......
+ATTRIBUTES >>ID / CLASS id="idname" class="classname"
+id="female"   >> #female
+class="test"  >> .test
+<span id="hello" class="world">Hello World</span>
+
+div{
+    PROPERTY:VALUE
+}
+
+id >> #
+
+#idname{
+    PROPERTY:VALUE
+}
+
+class >>.
+
+.classname{
+     PROPERTY:VALUE
+}
+
+border > red
+text   > blue
+backgroundColor >yellow
+text alignment > center 
+border width >> thick
+
+color :blue
+
+
+box model
+
+border
+margin
+padding
+content
+
+

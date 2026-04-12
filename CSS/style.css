@@ -1,0 +1,25 @@
+/* tag , id , class */
+.ext{
+    color:blue;
+    background-color: yellow;
+    font-size: 40px;
+    font-weight: bold;
+}
+.test{
+    color:rgb(255, 115, 0);
+    background-color: rgb(255, 0, 195);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* 
+inline
+internal
+external
+
+
+priority
+inline   >> quick fix 
+internal >> project is small & within page
+external >> project is big >>
+*/
