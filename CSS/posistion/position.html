@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .static {
+        position: static;
+    }
+    /* shifts from its original position, need to directional properties */
+    .relative {
+        position: relative;
+        background-color: yellow;
+        top: 10px;
+        left: 70px;
+    }
+    /* shifts from its parent element position, need to directional properties
+        try to make somebody parent >> take again ur body element
+     */
+    .absolute {
+        background-color: rgb(38, 0, 255);
+        position: absolute;
+        top: 17px;
+    }
+    .absolute-parent{
+        position: relative;
+        background-color: red;
+        height: 300px;
+        width: 300px;
+    }
+    .absolute-child {
+        background-color: rgb(0, 255, 98);
+        position: absolute;
+        top: 50px;
+        left:14px;
+        height: 50px;
+    }
+    p{
+        padding-bottom:2000px;
+    }
+    .fixed{
+        background-color: aquamarine;
+        position: fixed;
+        top:200px;
+    }
+    .sticky{
+         background-color: rgb(174, 127, 255);
+         position: sticky;
+         height:60px;
+         width:60px;
+         /* 150px from top */
+         top:150px; 
+    }
+</style>
+<body>
+    <div class="static">Hello World-Static</div>
+    <div class="relative">Hello World-Relative</div>
+    <div class="absolute">Hello World-Absolute</div>
+      <!-- relativly absolute -->
+    <div class="absolute-parent">
+        <span class="absolute-child">Hello World-Absolute Parent</span>
+    </div>
+    <!-- fixed & sticky 
+     scrollbar-->
+
+    <div class="fixed">Hello World - fixed</div>
+    <div class="sticky">Hello World - sticky</div>
+    <p></p>
+
+</body>
+
+</html>

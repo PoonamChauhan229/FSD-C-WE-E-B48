@@ -64,4 +64,27 @@ margin
 padding
 content
 
+Position Properperties:
+
+Place a clock on a wall
+top 
+bottom
+
+right
+left
+
+top right
+bottom left
+
+position:static
+
+position:relative
+position:absolute
+
+position:fixed
+position:sticky
+
+
+
+
 

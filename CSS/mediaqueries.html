@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: red;
+        ;
+    }
+
+    /* within 400px */
+    @media screen and (max-width:400px) {
+        div {
+            background-color: pink;
+            ;
+        }
+    }
+
+    /* beyond 500px */
+    @media screen and (min-width:500px) {
+        div {
+            background-color: blue;
+            font-size: 30px;
+            text-align: center;
+            padding:30px;
+            width:400px;
+        }
+    }
+
+    /* start || end  */
+    @media (min-width:600px) and (max-width:700px) {
+        p {
+            background-color: orange;
+        }
+    }
+</style>
+
+<body>
+    <div>Hi Everyone</div>
+    <p>Hello P Tag, How are you!</p>
+</body>
+
+</html>
+
+
+XS (Extra Small): 
+
+SM (Small): 
+
+MD (Medium): 
+
+LG (Large): 
+
+XL (Extra Large): 
+
+XXL (Extra Extra Large): 
+https://getbootstrap.com/docs/5.0/layout/breakpoints/
+
+Breakpoint	
+X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
