@@ -1,0 +1,30 @@
+CSS - Styling only - raw CSS - evrything done u 
+
+TAILWIND CSS
+FRAMEWORK >>PREFEEDED >>USE IT >>RULES 
+
+
+
+installation
+Create a Project Folder with a name Project >>
+Terminal>
+    initiaze the project 
+        npm init -y
+    >package.json
+
+    install tailwind CSS
+        npm install tailwindcss @tailwindcss/cli
+    >node_modules
+    >package-lock.json
+
+.gitignore - create the file manually
+    >node_modules
+
+create folder manually>src
+    Create 3 Files
+    >index.html >> copy paste from doc
+    >input.css  >> copy paste from doc
+
+Terminal >
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+    >command be running through till the project you working
