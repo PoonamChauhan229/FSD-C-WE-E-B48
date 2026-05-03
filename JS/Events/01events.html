@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btnClick">View</button>    
+    <!-- mouse event >> pointer -->
+    <button onclick="add(event,4,5)">Add</button>
+    <button onclick="counter()">Click Me</button>
+    <p ondblclick="counter()">This is the text</p>
+
+    <!-- Input events -->
+    <input type="text" name="" id="" oninput="showInput()">
+    <input type="text" name="" id="" onblur="showInput()">
+
+    <script>
+        function add(event, a, b) {
+            console.log(event)
+            // console.log("Btn clicked",2+2)
+            console.log(a + b)
+        }
+        let a = 0;
+        function counter() {
+            a++;
+            console.log("BTN is clicked", a)
+            let pTag1 = document.createElement("p")
+            pTag1.innerText = 'Test' + a
+            pTag1.style.backgroundColor = "red"
+            pTag1.style.fontSize = "25px"
+            pTag1.style.color = "white"
+            pTag1.style.width = "150px"
+            pTag1.style.textAlign = "center"
+            document.body.append(pTag1)
+        }
+        function showInput() {
+            console.log(event)
+            console.log(event.target.value)
+            let pTag1 = document.createElement("p")
+            pTag1.innerText = 'Test  ---- ' + event.target.value
+            pTag1.style.backgroundColor = "yellow"
+            pTag1.style.fontSize = "25px"
+            pTag1.style.color = "blue"
+            pTag1.style.width = "150px"
+            pTag1.style.textAlign = "center"
+            document.body.append(pTag1)
+        }
+        document.addEventListener("keypress", () => {
+            console.log(event)
+            if (event.code == 'Space' ||event.key=="s") {
+                let pTag1 = document.createElement("p")
+                pTag1.innerText = 'Test  ---- ' + event.code
+                pTag1.style.backgroundColor = "yellow"
+                pTag1.style.fontSize = "25px"
+                pTag1.style.color = "blue"
+                pTag1.style.width = "150px"
+                pTag1.style.textAlign = "center"
+                document.body.append(pTag1)
+            }
+        })    
+        let btnClick=document.getElementById('btnClick')
+        btnClick.addEventListener('click',()=>{
+            console.log("Btn is clicked")
+        })
+        
+    </script>
+</body>
+
+</html>

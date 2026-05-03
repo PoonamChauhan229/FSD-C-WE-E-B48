@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    
+    var >> let const 
+    functions >> arrow functions
+    template literals
+    spread operator || rest operator  >> ...
+    
+    -->
+    <script>
+        // arrow function 
+        // function keyword + functionName +return +{}
+
+        let add1 = () => console.log(5 + 2)
+        let add = () => 2 + 2
+        add1()
+        console.log(add())
+
+        // function keyword + functionName
+        let add3 = () => {
+            console.log(5 + 2)
+            console.log(5 + 2)
+            console.log(5 + 2)
+            return 100
+        }
+        console.log(add3())
+
+        let a = 45
+        let b = 65
+        let uname = "Guvi"
+        console.log(a, b)
+        console.log("Value of a is " + a + " Value of b is " + b)
+        console.log(`value of a is ${a} and value of b is ${b}, my name is ${uname}`)
+
+
+        // spread operator
+        let arr = [1, 2, 3, 4, 50]
+        console.log(...arr)
+        console.log(Math.max(1, 2, 3, 4, 5))
+        console.log(Math.max(...arr))
+
+        const numbers = [1, 2, 3];
+        function sum(x, y, z) {
+            return x + y + z;
+        }
+        console.log(sum(...numbers))
+
+        const array = [1, 2, 3];
+        const obj = { ...array }
+        console.log(obj)
+
+        let arr1 = [0, 1, 2];
+        const arr2 = [3, 4, 5];
+
+        console.log(arr1.concat(arr2))
+        arr1 = [...arr1, ...arr2];
+        console.log(arr1)
+
+        // rest operator
+
+        function test(a, b, ...args) {// rest
+            console.log(a, b, args)
+            console.log(...args)//spread
+        }
+        test(1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8)
+
+
+        //destructuring
+
+        // arrays & objects
+
+        let num = [100, 200, 300, 400]
+        console.log(num[0])
+        const [num1, num2, num3, num4] = num
+        console.log(num4)
+
+        let obj1 = { stu: "test", roll: 23 }
+
+        const{stu,roll}=obj1
+
+        console.log(stu,roll)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <div>
+        <div class="test test123 test67 test89">
+            <p id='p1'>Test</p>
+            <p>
+                <h2 id='head2'>Hello World</h2>
+            </p>
+        </div>
+    </div>
+    <hr> -->
+
+    <script>
+
+        let divTag1 = document.createElement("div")
+        let divTag2 = document.createElement("div")
+        let pTag1 = document.createElement("p")
+        let pTag2 = document.createElement("p")        
+        let heading1 = document.createElement("h2")
+
+        pTag1.setAttribute("id","p1")
+        heading1.setAttribute("id","head2")
+        heading1.setAttribute("class","head25")
+        divTag2.classList.add("test" ,"test123", "test67", "test89")
+
+        pTag1.innerText='Test'
+        heading1.innerText="Hello World"
+
+        pTag2.append(heading1)
+        divTag2.append(pTag1,pTag2)
+        divTag1.append(divTag2)
+        document.body.append(divTag1)
+
+        pTag1.style.backgroundColor="red"
+        pTag1.style.fontSize="25px"
+        pTag1.style.color="white"
+        pTag1.style.width="150px"
+        pTag1.style.textAlign="center"
+
+
+        // let divTag = document.createElement("div")
+        // divTag.innerHTML = `
+        //                     <div>
+        //                         <p>Test</p>
+        //                         <p>
+        //                             <h2>Hello World</h2>
+        //                         </p>
+        //                     </div>
+        // `
+        // document.body.append(divTag)
+        // console.log(divTag)
+
+
+
+    </script>
+</body>
+
+</html>

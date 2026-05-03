@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Create -->
+    <div>
+        <div>
+            <p>Test</p>
+            <p>
+                <h2>Hello World</h2>
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <a href="">Visit123</a>
+    <p id="test12">this is my webpage</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="divClass">This is just container</div>
+    <div class="divClass">This is just container</div>
+    <div class="divClass">This is just container</div>
+    <div class="divClass">This is just container</div>
+    <div class="divClass">This is just container</div>
+    <script>
+        let test12 = document.getElementById('test12')
+        console.log(test12)
+        test12.innerText = "welcome"
+        let divClass=document.getElementsByClassName('divClass')
+        console.log(divClass)
+
+        for(let i=0;i<divClass.length;i++){
+            console.log(divClass[i])
+            divClass[i].innerText="Welcome to the World of Manipulation"
+        }
+
+        let pTagTest=document.getElementsByTagName("p")
+        console.log(pTagTest)
+         for(let i=0;i<pTagTest.length;i++){
+            console.log(pTagTest[i])
+            pTagTest[i].innerText="Welcome to the World"
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        // using this document >> object >>manipulate
+        // create
+        let division = document.createElement('div')
+        console.log(division)
+        division.innerText = "Container/Box"
+
+        document.body.append(division)
+
+
+        let pTag = document.createElement('div')
+        console.log(pTag)
+        // pTag.innerText = "This is a Paragrapgh Tag"
+        pTag.innerHTML = "<h1>This is Heading inside the Paragraph</h1>"
+        //  pTag.innerText="<h1>This is Heading inside the Paragraph</h1>"
+
+
+        document.body.append(pTag)
+
+
+        let btn = document.createElement('button')
+        console.log(btn)
+        btn.innerText = "Click Me"
+        document.body.append(btn)
+
+
+    </script>
+</body>
+
+</html>
