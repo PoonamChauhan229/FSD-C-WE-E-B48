@@ -85,10 +85,55 @@
         console.log(num4)
 
         let obj1 = { stu: "test", roll: 23 }
+        let obj2 = { stu: "test", roll: 23 }
 
-        const{stu,roll}=obj1
+        const { stu, roll } = obj1
 
-        console.log(stu,roll)
+        console.log(stu, roll)
+
+        // array of objects >> same throughout 
+        let arr3 = [{ a1: 1 }, { a1: 2 }, { a1: 3 }]
+        console.log(arr3)
+        const [n1, n2, n3] = arr3
+        console.log(n1)
+        const { a1 } = n1
+        console.log(a1)
+
+        // for loop >> 
+        
+
+        // object shorthand property
+        // css shorthand 
+
+        const name5 = "test12"
+        const interest = "riding"
+
+        // obj using the above variable
+        const obj5 = {
+            // keyname
+            name5: name5,
+            interest: interest
+        }
+
+        // or 
+        const obj6 = {
+            name5: name5,  //key : value >> same
+            interest: interest //key :value >>same
+        }
+
+        console.log(obj5,obj6)
+
+        // object shorthand property >> 1 line 
+        const obj7={name5,interest}
+        console.log(obj7)
+
+        // lesser coder
+        //repittion is not there 
+        // easier to read
+
+
+
+
 
     </script>
 </body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- async await 
+        >> function
+         
+    -->
+    <button onclick="test3()">Show Users Title</button>
+    <button onclick="test4()">Clear Browser</button>
+    <script>
+
+        async function test1() {
+            console.log("hello1")
+        }
+        test1()
+
+
+        const test2 = async () => console.log("hello2")
+        test2()
+
+        async function test3() {
+            const res = await fetch("https://jsonplaceholder.typicode.com/todos") // readable stream
+            const data = await res.json() // readable stream > json >> user readable format
+            // console.log(data)
+            // console.log(data[0].title)
+
+            for (let i = 0; i < data.length; i++) {
+                //console.log(data[i].title)
+
+                const { userId, id, title, completed } = data[i]
+                console.log(userId, id, title, completed)
+
+                let heading4 = document.createElement("h5")
+                // heading4.innerText = `Title is :${data[i].title}`
+                heading4.innerHTML = `
+                                    || ||<br>
+                                    || userId is :${userId} ||<br>
+                                    || Title is :${title} ||<br>
+                                    || completed is :${completed} ||<br>
+                                    || ||<br>
+                                    `
+                document.body.append(heading4)
+
+
+                heading4.style.backgroundColor = "navy"
+                heading4.style.fontSize = "25px"
+                heading4.style.color = "white"
+                heading4.style.textAlign = "center"
+            }
+        }
+        // test3()
+
+        function test4(){
+            document.body.innerHTML=""
+        }
+
+
+
+    </script>
+</body>
+
+</html>

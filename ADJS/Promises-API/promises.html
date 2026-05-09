@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Promise another object -->
+
+    <!-- A >> B & C  >> 1:00PM
+            B
+            C 
+            6:30 pm
+           
+          @ 6:30 PM >> understand  >>Pending state
+          U all meet for party >>Party happens
+          any 1 doesnt turn up >>Party happens
+          nobody turned up >> cancel >> Party cancels
+          
+          JS
+          Promise  >> Pending || Fulfilled || Rejected
+
+          Fulfilled >> resolve|| Rejected >>reject >>Errors  >> handling errors 
+
+          JS >> 
+          synchronous scripting language >>queue >>
+          order of execution line by line >> one thread
+          >>blocking at time >> execeution time more
+
+
+          asynchronous programming
+          not going to block code >> 5 min >>
+          promises
+          async await
+          fetch >> api 
+
+
+    -->
+
+    <script>
+        // arr.map(()=>{})
+        // p1.add(,()=>{})
+        // new is a keyword >>create a object
+        // cbk >> one function 
+        // [[Prototype]] :  Promise
+        // [[PromiseState]]: "pending"
+        // [[PromiseResult]]: undefined
+        const p1 = new Promise((resolve, reject) => {
+            let sucess = true
+
+            if (sucess) {
+                resolve("Hey, m resolved")
+            } else {
+                reject("Hey unresolved")
+            }
+        })
+        console.log(p1) // object 
+        // .then() >> fulfiled >> value
+        // .catch() >> rejected >> handle err + message
+
+        p1.then((data) => console.log(data)).catch((err) => console.log(err))
+
+        // connecting a API
+        // https://www.postman.com/what-is-an-api/
+        // https: >>Protocol
+        // www.postman.com >> hosting server
+        // /what-is-an-api/ >> Endpoint  >> API Endpoints
+
+        // fetch() >> returns a promises >> resolved || rejected
+        // fetch(url,method) >> GET method >> retrival from 
+        // .then >> response (readable stream format) >> json >> json()
+        // .then >> fulfilled 
+        const res = fetch("https://jsonplaceholder.typicode.com/todos")
+
+        res.then((val) => val.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
+
+
+        
+fetch("https://jsonplaceholder.typicode.com/todos")
+            .then((val) => val.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
+        // multple promises
+
+        const p2 = new Promise((resolve, reject) => resolve("Hey, m resolved"))
+        const p3 = new Promise((resolve, reject) => resolve("Hey, m resolved"))
+        const p4 = new Promise((resolve, reject) =>
+            setTimeout(() => {
+                // block of code  >>   // 1000 ms 
+                resolve("Hey, m resolved")
+            },5000)
+        )
+        const p5 = new Promise((resolve, reject) => resolve("resolved"))
+
+        Promise.all([p2, p3, p4, p5])
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
+        
+            // return type array >> fulfilled values 
+
+
+         
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
