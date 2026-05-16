@@ -1,0 +1,97 @@
+HTML CSS JAVASCRIPT  > BROWSER UNDESRTAND
+
+What is Typescript ?
+superset OF JAVASCRIPT
+MICROSOFT TEAM
+
+superset:
+all JS code will be valid in TS
+TS can add certain/extra features to JS >>
+
+main feature:static typing
+TS >> checks ur code during the devlopement time >> before the code runs >> compile time
+a=50 //number
+b="text" //string
+
+
+old & new phone 
+xyz feature.
+
+oneplus -old feature >> JAVASCRIPT
+xyz feature.
+
+oneplus +++++ -old+new >>TS 
+xyz + abc 
+new phone is a superset of old phone
+
+Benefits>
+detects error early
+code readaility
+collaborate better
+
+
+JS >> dyanmically typed || no type check ||detect error at runtime     ||esay to smaller applications
+TS >> static typing     || type check    ||detect error at compiletime ||good for large applications 
+
+
+declare a Variables in TS >> same like JS
+var , let , const 
+var (less preferred)  
+
+
+Installation:
+Create a project folder
+Navigate to project folder
+npm install typescript --save-dev
+
+    node_modules        >> never touch 
+    package-lock.json   >> never touch
+    package.json        >> can be touched ||add here
+
+create a .gitignore >> node_modules
+
+npm init -y >> update the package.json (meta data of our entire project)
+
+
+npx tsc filename.ts              >> will convert ts file to js 
+
+node filename.js
+
+15-20 mins
+
+Type Annonations:
+Explicity mentione datatype of that variable/function/
+
+JS 
+>> allows to change the datatype >> later changes to any type
+>> Flexibilty -overwrite >> create bugs in large applications
+
+var >> overwrite || let const (ES6)
+Problem solved TS >> Type Annonations
+
+let username:string="Poonam"
+expected datatype >> string
+
+username=100
+//TS throw Error 
+
+examples :
+Banking application >> numbers
+let accountBalance :number =5000
+accountBalance="five thousand"
+
+TS stops before application run >> Type safety
+during development 
+
+Benefits:
+1- Prevent bugs
+2- 
+
+Primitive
+number
+string
+boolean >> true or false
+null & undefined
+
+
+
