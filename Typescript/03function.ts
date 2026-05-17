@@ -45,3 +45,31 @@ function getTotal(arr:number[]):number{
     return sum;
 }
 console.log(getTotal([10,20,30]));
+
+
+// wrt to Functions >>
+// any functions >> type || interface
+// 11:15 - 11:30
+
+
+// interface
+// AddFunction
+
+interface AddFunction{
+    (a:number,b:number):number;
+}
+
+const add5:AddFunction=(x,y)=>x+y
+console.log(add5(3,4))
+
+type AddFunction1={
+    (a:number,b:number):number;
+}
+
+const add6:AddFunction1=(x,y)=>x+y
+console.log(add6(3,5))
+
+type AddFunction2=(a:number,b:number)=>number;
+
+const add7:AddFunction2=(x,y)=>x+y
+console.log(add7(3,6))

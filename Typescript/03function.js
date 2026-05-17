@@ -36,3 +36,9 @@ function getTotal(arr) {
     return sum;
 }
 console.log(getTotal([10, 20, 30]));
+const add5 = (x, y) => x + y;
+console.log(add5(3, 4));
+const add6 = (x, y) => x + y;
+console.log(add6(3, 5));
+const add7 = (x, y) => x + y;
+console.log(add7(3, 6));
