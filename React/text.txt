@@ -1,3 +1,78 @@
 Project Setup with Vite
 React Folder Structure
 NPM & Packages
+
+node Package manager
+
+
+React JS>>popular library >> few in JS /TS way
+build UI >> single page application
+
+DOM >> VIRTUAL DOM
+
+
+HTML
+CSS
+JS
+TS
+
+REACT >> CONCEPTUAL LEARNING >> FOLLOWED BY PROJECT
+
+NETFLIX
+HOTSTAR
+YOUTUBE
+
+FEATURES
+REUSABLE COMPONENTS >> BTN >> 10 PLACES
+JSX                 >> HTML JS + CSS 
+
+FILENAME.JSX 
+FILENAME.TSX
+
+MUTLIPLE FILES >> COMPONENTS
+IMPORT EXPORT 
+
+
+EXPORT >> IMPORT
+
+HOOKS >> 
+
+
+2013 
+2019 >> HOOKS >>PART
+
+
+create a react folder >> travel to that folder
+npm create vite@latest
+PROJECT name : 05project
+Framework > React
+Variant   > Javscript
+
+Kill the terminal >> ctrl +c
+
+
+npm create vite@latest
+PROJECT name : 06project
+Framework > React
+Variant   > Typescript
+
+Run the Project 
+travel to the project folder cd foldername
+FSD-C-WE-E-B48\React\02conceptsReact_Variant_TS> 
+
+npm run dev
+
+Direct creation
+Command
+TS
+npm create vite@latest my-app -- --template react-ts
+
+npm create vite@latest 03directFolder_React_TS -- --template react-ts
+
+JS
+npm create vite@latest my-app -- --template react
+
+npm create vite@latest 04directFolder_React_JS -- --template react
+
+npm error
+execution policy
