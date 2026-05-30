@@ -1,47 +1,13 @@
-h1{
-  background-color: red;
+.profile{
+    display: flex;
+    gap:5px;
+    flex-wrap: wrap;
+    border:1px solid red;
 }
-div{
-  height:100px;
-  background-color: blue;
-  width:300px;
-  padding:10px;
-  margin-top:10px;  
-}
-p{
-   width: 200px;
-      height: 200px;
-      background: #4f46e5;
-      color: white;
-      border-radius: 50%;
-      border: 5px solid black;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 22px;
-      font-weight: bold;
-
-      margin: 50px auto;
-}
-div{
-  height: 100px;
-  width: 50px;  
-  background-color: blue;
-  margin: 10px;
-  padding: 10px;
-
-}
-
-#step1 {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-  background: var(--bg-contrast);
-  padding: 48px;
-  gap: 48px;
-}
-section{
-  display: flex;
+.profile2{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    text-align: center;
+    justify-content: center;
 }

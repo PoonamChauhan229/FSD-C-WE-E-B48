@@ -76,3 +76,17 @@ npm create vite@latest 04directFolder_React_JS -- --template react
 
 npm error
 execution policy
+
+Props passing >> Parent to child >> 1 way
+A B C D E
+
+App.jsx (PARENT) >> name="Poonam"
+    >A   >> name="Poonam"    doesnt need 
+        >B   >> name="Poonam"    doesnt need 
+            >C   >> name="Poonam"    doesnt need 
+                >D   >> name="Poonam"    doesnt need 
+                    >E   >> name="Poonam"   need
+
+App.jsx to E - not allowed
+
+Context API >> hooks >> useContext 
