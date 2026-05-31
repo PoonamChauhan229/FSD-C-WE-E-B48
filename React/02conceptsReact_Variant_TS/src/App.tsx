@@ -3,6 +3,9 @@ import FirstComponent from './components/01reactUnderstanding/FirstComponent'
 import SecondComponent from './components/01reactUnderstanding/SecondComponent'
 import UsersProfile from './components/01reactUnderstanding/UsersProfile'
 import {SimpleClass} from './components/classComponents/SimpleClass'
+import UseStateComponent from './components/hooks/useStateComponent'
+
+
 
 function App() {
   // array of objects
@@ -42,6 +45,7 @@ function App() {
   return (
     // lname ,name,photo
     <>
+    <UseStateComponent/>
     <SimpleClass fname="Guvi" />
     
     {/* simple props passing */}

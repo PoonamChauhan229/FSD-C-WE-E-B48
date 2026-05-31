@@ -90,3 +90,41 @@ App.jsx (PARENT) >> name="Poonam"
 App.jsx to E - not allowed
 
 Context API >> hooks >> useContext 
+
+
+hooks
+useState() + List Rendering +Work with Array of Objects
+virtual Dom 
+PropDrilling
+useContext()
+
+
+hooks  >> pre written functions
+React was created in 2011 and was later officially open-sourced to the public on May 29, 2013
+React Hooks were officially introduced on February 6, 2019, with the stable release of React 16.8.0.
+2013 - 2019 >> 5 Yrs >> Class COMPONENTS >> complexity , very few developers using
+2019-till now >> 7 yrs ....
+
+Before Hooks 
+StateLess & StateFul >> Managing the state
+StateFul >> class >> can manage state 
+
+After Hooks >> Functional COMPONENTS StateLess >> Need Hooks 
+Hooks  >> pre written functions
+useState() >> React vraibles 
+useContext()
+
+
+let const var >>JS +TS >> Create our Varaible
+useState() >> 
+
+Code from u all
+
+useStateComponnet  >> Create a btn >> on a click >> console.log()
+
+useState() >> returns an array >> destrture
+const [state,setState]=useState()// args initial value
+const [count,setCount]=useState<number>(0)
+const [name,setName]=useState<string>("Guvi")
+name="Guvi" >> initialValue
+setName >> function >> directly helps to value the initialValue
