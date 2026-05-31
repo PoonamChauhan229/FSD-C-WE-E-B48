@@ -94,7 +94,8 @@ Context API >> hooks >> useContext
 
 hooks
 useState() + List Rendering +Work with Array of Objects
-virtual Dom 
+
+virtual Dom >> 5 min
 PropDrilling
 useContext()
 

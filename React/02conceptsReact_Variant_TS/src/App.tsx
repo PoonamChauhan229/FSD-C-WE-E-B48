@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import './App.css'
 import FirstComponent from './components/01reactUnderstanding/FirstComponent'
+import One from './components/01reactUnderstanding/PropDrilling/One'
 import SecondComponent from './components/01reactUnderstanding/SecondComponent'
 import UsersProfile from './components/01reactUnderstanding/UsersProfile'
 import {SimpleClass} from './components/classComponents/SimpleClass'
@@ -41,11 +43,12 @@ function App() {
       age:30
     },
   ]
-
+  const [book,setBook]=useState<string>("Two States")
   return (
     // lname ,name,photo
     <>
-    <UseStateComponent/>
+    <One book={book} setBook={setBook}/>
+    <UseStateComponent usersList={users}/>
     <SimpleClass fname="Guvi" />
     
     {/* simple props passing */}
