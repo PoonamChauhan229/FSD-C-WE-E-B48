@@ -129,3 +129,12 @@ const [count,setCount]=useState<number>(0)
 const [name,setName]=useState<string>("Guvi")
 name="Guvi" >> initialValue
 setName >> function >> directly helps to value the initialValue
+
+
+forms >> u can fill and submit >>
+React >> 2 types >> controlled (useState)& uncontrolled form (useRef)
+
+controlled (useState) >> React State 
+
+
+formik library >> we can be esaily used in react >> explore

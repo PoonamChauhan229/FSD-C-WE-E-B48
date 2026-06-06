@@ -6,6 +6,9 @@ import SecondComponent from './components/01reactUnderstanding/SecondComponent'
 import UsersProfile from './components/01reactUnderstanding/UsersProfile'
 import {SimpleClass} from './components/classComponents/SimpleClass'
 import UseStateComponent from './components/hooks/useStateComponent'
+import ControlledLoginForm from './components/forms/ControlledLoginForm'
+import UnControlledLoginForm from './components/forms/UnControlledLoginForm'
+import FormikSignupForm from './components/forms/FormikSignUpForm'
 
 
 
@@ -45,7 +48,12 @@ function App() {
   ]
   const [book,setBook]=useState<string>("Two States")
   return (
-    // lname ,name,photo
+
+    <>
+    <FormikSignupForm/> 
+    <UnControlledLoginForm/>
+    <ControlledLoginForm/>
+    {/* // lname ,name,photo */}
     <>
     <One book={book} setBook={setBook}/>
     <UseStateComponent usersList={users}/>
@@ -62,6 +70,7 @@ function App() {
 
 
 
+    </>
     </>
   )
 }
