@@ -15,6 +15,8 @@ const FormikSignupForm = () => {
   });
   console.log(formik)
   return (
+    <>
+    <h1></h1>
     <form onSubmit={formik.handleSubmit}>
       <label htmlFor="firstName">First Name</label>
       <input
@@ -42,6 +44,7 @@ const FormikSignupForm = () => {
       />
       <button type="submit">Submit</button>
     </form>
+    </>
   );
 };
 

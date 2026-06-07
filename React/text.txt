@@ -138,3 +138,29 @@ controlled (useState) >> React State
 
 
 formik library >> we can be esaily used in react >> explore
+
+State Managment
+useState() >> return an array >> destructing
+useRef()  >> return a varaible >> object
+
+API calls: 
+useEffect()
+
+https://jsonplaceholder.typicode.com/todos
+
+Rendering 
+API calls >> external system >>takes the data >> show the data in UI
+useEffect(setup, dependencies?)
+setup >> cbk function 
+dependencies >> [] >> not mandate
+
+>> parents,money,weather,travelling,health,holiday....n no of factors 
+
+useEffect(()=>{}) >> without dependencies array >> Rendering will after each change
+
+useEffect(()=>{},[]) >> with empty dependencies array
+
+useEffect(()=>{},[factor1,factor2.....n]) >> with dependencies array
+
+
+Initial Render

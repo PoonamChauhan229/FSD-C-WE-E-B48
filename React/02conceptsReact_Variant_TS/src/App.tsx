@@ -9,6 +9,7 @@ import UseStateComponent from './components/hooks/useStateComponent'
 import ControlledLoginForm from './components/forms/ControlledLoginForm'
 import UnControlledLoginForm from './components/forms/UnControlledLoginForm'
 import FormikSignupForm from './components/forms/FormikSignUpForm'
+import UseEffectComponent from './components/hooks/UseEffectComponent'
 
 
 
@@ -50,6 +51,7 @@ function App() {
   return (
 
     <>
+    <UseEffectComponent/>
     <FormikSignupForm/> 
     <UnControlledLoginForm/>
     <ControlledLoginForm/>
