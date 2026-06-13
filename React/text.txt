@@ -164,3 +164,10 @@ useEffect(()=>{},[factor1,factor2.....n]) >> with dependencies array
 
 
 Initial Render
+
+useReducer >> State Complex
+Optimization Puropse
+useCallback 
+useMemo
+
+Pure function - interview Ques >>
