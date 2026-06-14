@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom"
+
 interface UserProps {
     id: number,
     name: string,
@@ -9,6 +11,7 @@ type UserListProps={
 }
 
 const UsersProfile = ({usersList}:UserListProps) => {
+        const navigate=useNavigate()
     console.log(usersList) // proper object        
   return(
     <>
@@ -17,6 +20,8 @@ const UsersProfile = ({usersList}:UserListProps) => {
             usersList.map(({id,name,age})=>(
                 <div key={id}>
                     <h3>{name}-{age}</h3>
+                    {/* userDetails/3 */}
+                    <button onClick={()=>navigate(`/userDetails/${id}`)}>Visit Details</button>
                 </div>
             ))
         }

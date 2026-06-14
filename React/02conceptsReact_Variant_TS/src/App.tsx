@@ -1,11 +1,4 @@
-import { useState } from 'react'
 import './App.css'
-import FirstComponent from './components/01reactUnderstanding/FirstComponent'
-import One from './components/01reactUnderstanding/PropDrilling/One'
-import SecondComponent from './components/01reactUnderstanding/SecondComponent'
-import UsersProfile from './components/01reactUnderstanding/UsersProfile'
-import { SimpleClass } from './components/classComponents/SimpleClass'
-import UseStateComponent from './components/hooks/useStateComponent'
 import ControlledLoginForm from './components/forms/ControlledLoginForm'
 import UnControlledLoginForm from './components/forms/UnControlledLoginForm'
 import FormikSignupForm from './components/forms/FormikSignUpForm'
@@ -13,11 +6,15 @@ import UseEffectComponent from './components/hooks/UseEffectComponent'
 import UseReducerComponent from './components/hooks/UseReducerComponent'
 import UseMemoComponent from './components/hooks/UseMemoComponent'
 import UseCallbackComponent from './components/hooks/UseCallbackComponent'
-
-
+import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import PropsComponents from './PropsComponents'
+import { useState } from 'react'
+import RouteComponent from './components/Routing/RouteComponent'
+import UserDetails from './components/Routing/UserDetails'
 
 function App() {
-  // array of objects
+  const [book, setBook] = useState<string>("Two States")
   const users = [
     {
       id: 1,
@@ -50,37 +47,29 @@ function App() {
       age: 30
     },
   ]
-  const [book, setBook] = useState<string>("Two States")
   return (
 
     <>
-      <UseCallbackComponent />
-      
-      <>
-        <UseMemoComponent />
-        <UseReducerComponent />
-        <UseEffectComponent />
-        <FormikSignupForm />
-        <UnControlledLoginForm />
-        <ControlledLoginForm />
-      </>
-     
-      <>
-        <One book={book} setBook={setBook} />
-        <UseStateComponent usersList={users} />
-        <SimpleClass fname="Guvi" />
+      <Navbar />
+        <RouteComponent/>
 
-        {/* simple props passing */}
-        <div className='profile'>
-          <FirstComponent lname="khanna" name="ashish" photo="https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-avatar-image-for-profile-png-image_13001882.png" age={25} />
-        </div>
-        {/*  */}
-        <UsersProfile usersList={users} />
+      <Routes>
+        <Route path='/UseCallbackComponent' element={<UseCallbackComponent />} />
+        <Route path='/UseMemoComponent' element={<UseMemoComponent />} />
+
+        <Route path='/UseReducerComponent' element={<UseReducerComponent />} />
+        <Route path='/UseEffectComponent' element={<UseEffectComponent />} />
+        <Route path='/FormikSignupForm' element={<FormikSignupForm />} />
+        <Route path='/UnControlledLoginForm' element={<UnControlledLoginForm />} />
+        <Route path='/ControlledLoginForm' element={<ControlledLoginForm />} />
+        <Route path='/PropsComponents' element={<PropsComponents book={book} setBook={setBook} users={users}/>} />
+        {/* dynamic routes */}
+        <Route path='userDetails/:id' element={<UserDetails users={users}/>}/>
+      </Routes>
 
 
 
-      </>
-      
+
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react"
+import { useCallback, useState } from "react"
 import ChildCallBackComponent from "./ChildCallBackComponent"
 
 // Parent 
@@ -10,8 +10,7 @@ const UseCallbackComponent=()=>{
     //return a function >> memoized function >> function recreate
     const cachedClickFn = useCallback(()=>{
         console.log("Btn clicked")
-        // setNum((prev)=>prev+1) // updated here
-    }, [num])// console the statement
+    }, [])// console the statement
         console.log("Parent Rendered")
 
     return(
