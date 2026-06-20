@@ -13,6 +13,7 @@ const Navbar = () => {
             <div className="subItems"><Link className="subItems" to='/UnControlledLoginForm'>UnControlledLoginForm</Link></div>
             <div className="subItems"><Link className="subItems" to='/ControlledLoginForm'>ControlledLoginForm</Link></div>
             <div className="subItems"><Link className="subItems" to='/PropsComponents'>PropsComponents</Link></div>
+            <div className="subItems"><Link className="subItems" to='/crud'>CRUD</Link></div>
             <button onClick={()=>navigate('/FormikSignupForm')}>Forms</button>
         </div>
     )

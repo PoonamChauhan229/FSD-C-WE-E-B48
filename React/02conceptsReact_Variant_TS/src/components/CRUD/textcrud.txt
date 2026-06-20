@@ -1,0 +1,8 @@
+1.movie db >>
+title 
+desc
+rating
+trailer
+poster
+
+2. table 

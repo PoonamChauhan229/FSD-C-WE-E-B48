@@ -21,6 +21,7 @@ function UseStateComponent({ usersList }: UserListProps) {
     const [emp, setEmp] = useState<Employee>({ empName: "Emp01", empAge: 45 })
     // array of objects >>user
     const [profileDetails, setProfileDetails] = useState(usersList)
+    
     const [proUser, setProUser] = useState<UserProps[]>([{
         id: 1,
         name: "abc",

@@ -12,6 +12,10 @@ import PropsComponents from './PropsComponents'
 import { useState } from 'react'
 import RouteComponent from './components/Routing/RouteComponent'
 import UserDetails from './components/Routing/UserDetails'
+import DisplayMovie from './components/CRUD/DisplayMovie'
+import ViewMovieDetails from './components/CRUD/ViewMovieDetails'
+import EditMovie from './components/CRUD/EditMovie'
+import AddMovie from './components/CRUD/AddMovie'
 
 function App() {
   const [book, setBook] = useState<string>("Two States")
@@ -51,7 +55,8 @@ function App() {
 
     <>
       <Navbar />
-        <RouteComponent/>
+        {/* <RouteComponent/> */}
+
 
       <Routes>
         <Route path='/UseCallbackComponent' element={<UseCallbackComponent />} />
@@ -63,8 +68,13 @@ function App() {
         <Route path='/UnControlledLoginForm' element={<UnControlledLoginForm />} />
         <Route path='/ControlledLoginForm' element={<ControlledLoginForm />} />
         <Route path='/PropsComponents' element={<PropsComponents book={book} setBook={setBook} users={users}/>} />
+        <Route path='/addmovie' element={<AddMovie/>}/>
         {/* dynamic routes */}
         <Route path='userDetails/:id' element={<UserDetails users={users}/>}/>
+        <Route path='movie/:id' element={<ViewMovieDetails/>}/>
+        <Route path='/crud' element={<DisplayMovie/>}/>
+         <Route path='editmovie/:id' element={<EditMovie/>}/>
+         
       </Routes>
 
 
