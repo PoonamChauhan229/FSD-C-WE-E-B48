@@ -16,6 +16,9 @@ import DisplayMovie from './components/CRUD/DisplayMovie'
 import ViewMovieDetails from './components/CRUD/ViewMovieDetails'
 import EditMovie from './components/CRUD/EditMovie'
 import AddMovie from './components/CRUD/AddMovie'
+import PropDrillingComponents from './components/PropDrilling/PropDrillingComponents'
+import ContextComponents from './components/Context/ContextComponents'
+import ProviderComponent from './components/Context/ProviderComponent'
 
 function App() {
   const [book, setBook] = useState<string>("Two States")
@@ -53,11 +56,9 @@ function App() {
   ]
   return (
 
-    <>
+    <ProviderComponent>
       <Navbar />
         {/* <RouteComponent/> */}
-
-
       <Routes>
         <Route path='/UseCallbackComponent' element={<UseCallbackComponent />} />
         <Route path='/UseMemoComponent' element={<UseMemoComponent />} />
@@ -67,7 +68,10 @@ function App() {
         <Route path='/FormikSignupForm' element={<FormikSignupForm />} />
         <Route path='/UnControlledLoginForm' element={<UnControlledLoginForm />} />
         <Route path='/ControlledLoginForm' element={<ControlledLoginForm />} />
-        <Route path='/PropsComponents' element={<PropsComponents book={book} setBook={setBook} users={users}/>} />
+        <Route path='/PropsComponents' element={<PropsComponents users={users}/>} />
+         <Route path='/Propsdrilling' element={<PropDrillingComponents book={book} setBook={setBook}/>} />
+         <Route path='/contextapi' element={<ContextComponents book={book} setBook={setBook}/>} />
+
         <Route path='/addmovie' element={<AddMovie/>}/>
         {/* dynamic routes */}
         <Route path='userDetails/:id' element={<UserDetails users={users}/>}/>
@@ -76,11 +80,7 @@ function App() {
          <Route path='editmovie/:id' element={<EditMovie/>}/>
          
       </Routes>
-
-
-
-
-    </>
+    </ProviderComponent>
   )
 }
 

@@ -6,3 +6,7 @@ trailer
 poster
 
 2. table 
+
+Bugs:
+Delete >> Auto Refresh
+Define Datatypes
