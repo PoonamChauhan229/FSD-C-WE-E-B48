@@ -171,3 +171,17 @@ useCallback
 useMemo
 
 Pure function - interview Ques >>
+
+
+global state management >> CONTEXT API >> React  >> Provider Subscriber Model
+Redux & Redux ToolKit
+
+
+Redux 
+
+
+Redux ToolKit
+
+
+Create a Redux Store
+configureStore()

@@ -23,6 +23,7 @@ const Navbar = () => {
             <div className="subItems"><Link className="subItems" to='/crud'>CRUD</Link></div>
             <button onClick={()=>navigate('/FormikSignupForm')}>Forms</button>
             <div className="subItems">{navbarcontextValue?.nameDetails}</div>
+            <button onClick={()=>navigate('/redux')}>Redux</button>
         </div>
     )
 }

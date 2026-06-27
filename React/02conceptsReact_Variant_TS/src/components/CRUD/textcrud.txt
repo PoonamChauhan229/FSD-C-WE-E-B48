@@ -8,5 +8,5 @@ poster
 2. table 
 
 Bugs:
-Delete >> Auto Refresh
+Delete btn>> Auto Refresh
 Define Datatypes

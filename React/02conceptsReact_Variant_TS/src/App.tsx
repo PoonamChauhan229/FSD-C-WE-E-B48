@@ -19,6 +19,7 @@ import AddMovie from './components/CRUD/AddMovie'
 import PropDrillingComponents from './components/PropDrilling/PropDrillingComponents'
 import ContextComponents from './components/Context/ContextComponents'
 import ProviderComponent from './components/Context/ProviderComponent'
+import ReduxMovie from './components/redux/ReduxMovie'
 
 function App() {
   const [book, setBook] = useState<string>("Two States")
@@ -78,6 +79,8 @@ function App() {
         <Route path='movie/:id' element={<ViewMovieDetails/>}/>
         <Route path='/crud' element={<DisplayMovie/>}/>
          <Route path='editmovie/:id' element={<EditMovie/>}/>
+          <Route path='redux' element={<ReduxMovie/>}/>
+
          
       </Routes>
     </ProviderComponent>
