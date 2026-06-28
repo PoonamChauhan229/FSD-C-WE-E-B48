@@ -1,14 +1,21 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import CounteRtk from "./Countertk"
-import { useDispatch } from "react-redux"
-import { addItem, removeItem,clearCart } from './utilis/cartSlice'
-import CartRtk from "./CartRtk"
+import {useGetMoviesQuery,useDeleteMoviesMutation} from './services/movieApi'
 
-const ReduxMovie = () => {
+
+const ReduxRTKQueryMovie = () => {
+    const movieData=useGetMoviesQuery() // object
+    const {data,isLoading,isError}=movieData
+    
+    const [deleteMovie]=useDeleteMoviesMutation() // array
+    
+    // isLodaing >> true || data is yet to fetcg
+    // isError >> true   || data is fetched >> false
+    // data    >> hold the data
+    console.log(data,isLoading,isError)
+
     const navigate = useNavigate()
-    const dispath = useDispatch()
 
     type MovieDataType = {
         rating: number,
@@ -28,38 +35,20 @@ const ReduxMovie = () => {
         "id": "1"
     }])
 
-    async function fetchMovies() {
-        const res = await axios.get("https://6a361c63766b831960f8ef2e.mockapi.io/movie/movie")
-        console.log(res.data)
-        setMovieDb(res.data)
-    }
+   
 
     const handleDelete = async (id) => {
         console.log(id)
-        const res = await axios.delete("https://6a361c63766b831960f8ef2e.mockapi.io/movie/movie/" + id)
-        console.log(res.data)
+        const res=await deleteMovie(id)
+        console.log(res)       
     }
-
-    // Initial Render
-    useEffect(() => {
-        fetchMovies()
-    }, [])
-
-    const handleCartItems = (movieItems) => {
-        console.log("handleCartItems", movieItems)// payload
-        dispath(addItem(movieItems))
-
-    }
+  
     return (
         <>
 
-            <CounteRtk />
-            <CartRtk/>
             <div style={{ display: "flex", justifyContent: "space-between", padding: "5px" }}>
 
-                <button onClick={() => navigate('/addMovie')}>Add Movie</button>
-                <button onClick={() => { dispath(removeItem()) }}>Remove From Cart</button>
-                <button onClick={() => { dispath(clearCart()) }}>Clear Cart</button>
+                <button onClick={() => navigate('/addmoviertk')}>Add Movie</button>
             </div>
 
 
@@ -77,7 +66,7 @@ const ReduxMovie = () => {
                 </thead>
                 <tbody>
                     {
-                        moviedb.map((element, index) => (
+                        data?.map((element, index) => (
                             <tr>
                                 <th scope="row">{element.id}</th>
                                 <th scope="row">{element.title}</th>
@@ -86,10 +75,9 @@ const ReduxMovie = () => {
                                 <td>{element.trailer}</td>
                                 <td>{element.rating}</td>
                                 <td>
-                                    {/* <button onClick={() => navigate(`/editmovie/${element.id}`)}>Edit</button> */}
-                                    {/* <button onClick={() => handleDelete(element.id)}>Delete</button> */}
-                                    {/* <button onClick={() => navigate(`/movie/${element.id}`)}>View Details</button> */}
-                                    <button onClick={() => { handleCartItems(element) }}>Add to Cart</button>
+                                    <button onClick={() => navigate(`/editrtkmovie/${element.id}`)}>Edit</button>
+                                    <button onClick={() => handleDelete(element.id)}>Delete</button>
+                                    <button onClick={() => navigate(`/movie/${element.id}`)}>View Details</button>
 
 
                                 </td>
@@ -104,4 +92,4 @@ const ReduxMovie = () => {
         </>
     )
 }
-export default ReduxMovie
+export default ReduxRTKQueryMovie

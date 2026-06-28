@@ -2,23 +2,27 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducers from './counterSlice'
 import cartReducers from './cartSlice'
-export const store=configureStore({
-    // slices {}
-     reducer: {
-        counter:counterReducers,
-        cartSlice:cartReducers
-        
-     }, // later on 
+import { movieApi } from '../services/movieApi'
+
+export const store = configureStore({
+   // slices {}
+   reducer: {
+      counter: counterReducers,
+      cartSlice: cartReducers,
+      [movieApi.reducerPath]: movieApi.reducer,
+   },
+   middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(movieApi.middleware),
 })
 
-// store  >> where u are going to put ur data 
+// store  >> where u are going to put ur data
 // slice
 // reducer
 // reducers
 // Provider
 // action
 // dispatch
-// hooks >> 
+// hooks >>
 
 
 // Step1: Configure Store  >> '@reduxjs/toolkit'

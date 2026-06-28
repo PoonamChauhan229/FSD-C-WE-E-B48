@@ -11,9 +11,16 @@ const cartSlice=createSlice({
     initialState,
     reducers:{
         //action>>addItem , removeItem,clearCart
-        addItem:(state)=>{},
-        removeItem:(state)=>{},
-        clearCart:(state)=>{}
+        // click on btn >> add the item to the cart >> itme - payload 
+        addItem:(state,action)=>{
+            state.items.push(action.payload) // add to the array
+        },
+        removeItem:(state)=>{
+            state.items.pop()
+        },
+        clearCart:(state)=>{
+            state.items=[]
+        }
     }
 })
 
@@ -21,3 +28,9 @@ const cartSlice=createSlice({
 export const {addItem,removeItem,clearCart}=cartSlice.actions
 // reducer export
 export default cartSlice.reducer
+
+
+//15 min
+
+
+// task to create user slice >> 

@@ -20,6 +20,9 @@ import PropDrillingComponents from './components/PropDrilling/PropDrillingCompon
 import ContextComponents from './components/Context/ContextComponents'
 import ProviderComponent from './components/Context/ProviderComponent'
 import ReduxMovie from './components/redux/ReduxMovie'
+import ReduxRTKQueryMovie from './components/redux/ReduxRTKQueryMovie'
+import AddRTKMovie from './components/redux/AddRTKMovie'
+import EditRTKMovie from './components/redux/EditRTKMovie'
 
 function App() {
   const [book, setBook] = useState<string>("Two States")
@@ -80,8 +83,9 @@ function App() {
         <Route path='/crud' element={<DisplayMovie/>}/>
          <Route path='editmovie/:id' element={<EditMovie/>}/>
           <Route path='redux' element={<ReduxMovie/>}/>
-
-         
+           <Route path='rtkquery' element={<ReduxRTKQueryMovie/>}/>        
+            <Route path='/addmoviertk' element={<AddRTKMovie/>}/> 
+            <Route path='/editrtkmovie/:id' element={<EditRTKMovie/>}/> 
       </Routes>
     </ProviderComponent>
   )

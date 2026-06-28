@@ -24,6 +24,7 @@ const Navbar = () => {
             <button onClick={()=>navigate('/FormikSignupForm')}>Forms</button>
             <div className="subItems">{navbarcontextValue?.nameDetails}</div>
             <button onClick={()=>navigate('/redux')}>Redux</button>
+            <button onClick={()=>navigate('/rtkquery')}>RTKquery</button>
         </div>
     )
 }
