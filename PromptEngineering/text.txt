@@ -1,0 +1,184 @@
+Good Prompt 
+Audience
+length 
+Topic
+style
+example needed or not
+
+explain AI ?
+
+Write a 200 word intro of AI for an 5yrs old child
+
+create a website ? poor prompt
+create a simple website , website should include techstack , mainly focus on area 
+of useState and UseEffects hooks, should be responsive 
+
+
+Write an email ?
+
+Write an email , 2 days of leave , i need send to my HR. tone should be polite and it has to be short email 200 words
+
+prompt is a  request , good prompt >> complete instruction
+
+5 key componets
+Role : Am , i react instructor
+Task : explain react in 200 words and give me 20 basic react interview questions
+context area : college students in 3rd year and 1-2 yrs experince students
+constraints : max go with 250 words overall
+output with format :Questions in bold letters and answers in bullets , give me in a word document
+
+
+Role :tone,perspective,idelogy,expertise >> who i am >> i am fsd developer , 
+TAsk : What u are looking for ? summarize it in brief , compare , review , debug,analyse
+context area : Audience , experince, domain,
+constraints : length , word count,no. of examples >> specify your limit 
+output format : object, json,bullets , paragraphs,word document, ppt ,step by step guide
+
+need, purpose & Audience
+
+5-6 types of prompts
+1-Zero shot Prompt >> simple task
+2-One shot Prompt  >> format with 1 ex
+3-Few shot Prompt  >> pattern recoginze
+
+1-Zero shot Prompt >> AI to perform task , no examples given 
+>>translate into french
+>>summarize the following article
+
+>> understanding ,genral questions , faq,
+
+2-One shot Prompt
+give 1 example and ask another in same manner
+
+Input :Appple
+Output:Fruit
+
+Kinldy generate like above 5 examples in above format
+fomatting, descritptions,similar writing task
+
+3-Few shot Prompt
+provide multiple examples , AI can recoginze the pattern
+
+Input: Apple
+Output: Fruit
+
+Input: Rose
+Output: Flower
+
+Input: Tiger
+Output: Animal
+
+Input: Carrot
+Output: Vegetable
+
+Input: Laptop
+Output: Electronic Device
+
+Now ask questions on the basis of above ?
+Like 
+Q1: Tiger ?
+
+Q1: Tiger → ?
+
+Q2: Apple → ?
+
+Q3: Rose → ?
+
+Q4: Laptop → ?
+
+Q5: Carrot → ?
+
+Answer Key :
+Q1: Tiger → Animal
+
+Q2: Apple → Fruit
+
+Q3: Rose → Flower
+
+Q4: Laptop → Electronic Device
+
+Q5: Carrot → Vegetable
+
+Review: amazing movie
+Sentiment: Positive
+
+Review: food terrible
+Sentiment: Negative
+
+Review: hotel room clean & comfortable
+Sentiment: ?
+
+Review: hotel room clean & comfortable
+Sentiment: Positive
+
+
+4-Role based Prompt:
+explain sql
+
+acts as a database instructor, exaplin sql joins to beginners with simple diagrams and use cases , also use some simple exmaples max 2-3 examples each 
+
+5-step by step prompt  (Chain of Thought style)
+
+Instead of asking direct answers
+CQ >> to solve
+
+reach to AI
+
+prompt 1: first explain the problem clearly 
+prompt 2 : exaplin each step how do i reach to a solution , basically explain me the appraoch
+step3: implemsnt same with proper explanations , with proper comments give the solution, final solution
+
+solution not working ?
+1- whats wrong ? error 
+2- How to fix it 
+3-show the corrected code.
+
+>> better learning
+>> easier debugging
+>> better explanations
+
+breakdown our thoughts into several proving to AI
+AI >> child 
+
+Personna prompt >> targrt Audience
+10 yrs old 
+explain coding to comedian
+explain coding using stand up comedian
+>> fun , enagaing,audeince specfic
+
+
+write a email ? 
+zero short prompt
+role based
+Persona
+
+15 min
+
+Prompt engineering for developers:
+messages:[
+    {
+        role:"system",
+        content:"Helpful coding assistant"
+    },
+     {
+        role:"user",
+        content:"Explain the user role"
+    }
+]
+
+
+Mistakes:
+Vague prompt given
+No context given
+dont ask unrelated questions/ mutilple questions
+not mention expcetation
+dont trust AI blindly
+not ignore token limits >> chatgpt / lower the model >> responses are not generic/expectations
+
+not with AI
+Privacy >> personal data & information
+confidentail data >> personal/professional
+Any medical emergencies 
+
+
+
