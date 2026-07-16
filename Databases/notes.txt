@@ -1,0 +1,28 @@
+Databases >>Data >> Place we can store the data
+Storage >> Databases
+Relational      >> rows and cols - table 
+                >> n no. of tables
+                >> sales , orders ,customer
+                >> customer -- place order -- sales happened >>all the tables are connected here
+                >> 10 tables
+Non Relational  >>
+
+Mock API
+    >> DB >> FE
+        3-4 schemas
+
+Product -1 >> DB1 used
+Product -2 >> DB2 used ...............
+
+Project -1 >> DB1 used
+Project -2 >> DB2 used ...............
+
+Project -1 >> DB1 used
+Ecomm Project 
+    >  sales , orders ,customer
+
+MYSQL >> Structured Query Language
+    >>
+Relational Db >> mysql, pgsql,oracle, microsoftsql server,sqlite
+
+communicated >> query Language

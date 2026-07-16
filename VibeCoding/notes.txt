@@ -1,0 +1,56 @@
+Vibecoding:
+    How many AI tools - for coding purposes.
+     ChatGPT,Claude,Copilot,Codeium,Gemini..........
+
+    Using AI - occassionlly (coders+ noncoders)|| build software using AI(coders)
+             - both same or different ?
+             - responds on prompt we provide 
+             - example : Having fever/thraot suggest home remedies >> hot water with salt
+                       : I want to design something a navbar - code - suggestion itself >> Implement in application 
+                       : Provide prompt , generally output >> clear and concise
+                       : Handling prompt complex>> it will give u response >> but it might not be accurate/efficient/underperform
+
+    occassionlly AI , building software >> Vibe Coding
+    Vibe coding should be done freshers ?
+        >> not do vibe coding 
+        >> freshers >> reffering + trouble you 
+        >> directly prompt 
+        >> JOB >>use AI 
+        >> mini projects >> dependant >> feshers >> understand concepts 
+        >> debugging >> 3 days code + debug in 2 hrs
+        >> vibe coding >> 3 hrs code + debug for 3 days ?
+
+        Gives the code >> customization , u have to do >>we have to understand first AI giving
+
+        function add(){
+            let ottal=0
+            total=34+55
+            console.log(total)
+        }
+        add()
+
+        // what >> right or wrong ? >> evaluation >>?
+        // output is not acheived >> 2.5-3 >> reason
+
+        // 4.5/5 >> typo error
+
+//advantages: understanding +implemenation
+
+//era ?
+stackoverflow ?
+staxkoverflow.com 
+single ques >> 99 responses >> we should try 99 reponses 
+
+// refine the implemenation ??
+
+Create a responsive React login page using Material UI with email validation, password validation, loading state, and error handling.
+20  min
+
+ChatGPT
+GitHub Copilot
+Cursor
+Claude Code
+Windsurf
+Gemini Code Assist
+
+04 react folder
