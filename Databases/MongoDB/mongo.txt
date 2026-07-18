@@ -1,0 +1,223 @@
+SQL >>
+    >> rows & cols >>tabular format
+    >> tabular >> tables-Users tables
+    >> fixed schema
+NOSQL
+Vector DB >> Chroma , PineDB, Faiss
+
+Mongo DB : 
+    > Document DB  >> users list 
+            >> 10 users >> 1user(Rahul) >>Document1 , 2user >> 2Document .....10 Documents
+    >Collection >> Users Collection
+    >Flexible schema >> most application prefer in modern web devlopment
+    >BSON format
+
+    SQL  (DB)
+        >row
+        >Col
+        >table
+        >fixed schema
+        >Structured DB
+        >IDS
+    NO SQL (DB)
+        >Document
+        >Feild
+        >Collection
+        >Flexible schema
+        >Non Structured DB
+        >Object ID
+
+    JSON / BSON
+    {
+        "name:"Rahul",
+        "age:22
+    }
+
+    Mongodb internally converts into BSON Format
+    Binary Format >> Machine Read ,More Datattypes
+    [
+        {
+            "name:"Rahul",
+            "age:22 // no null values for course
+        },
+        {
+            "name:"Keyur",
+            "age:22,
+            "course":"MongoDB"
+        }
+    ]
+
+    //Real time >> Ecomm 
+    >> Each products >> different attributes 
+
+    CRUD >> Mongodb
+        >> Mongodb Local
+        >> MongoDB Cloud >> Nodejs
+
+Create DB >> needs a collection >> 1 Data has to be inserted
+First download >> 2 insatllationsfiles >>insatll
+C:/ProgramFiles/Mondodb >> addressbar >> cmd open 2 times
+
+cmd1 >> mongod  >> server
+cmd2 >> mongosh >> connecting with that server + we write will our queries
+.... cmd2 itself
+
+show dbs >> show me existing DB
+use FSD-WE-B48 >> create DB
+show collections >> show all the collections
+
+Create collections >> Inserting the data | create it by query
+create it by query
+    >db.createCollection("collectionName") - db.createCollection("students")
+Inserting the data
+    >db.collectionName.insertOne({})
+    db.users.insertOne({
+            "name":"Keyur",
+            "age":22,
+            "course":"MongoDB"
+        });
+
+CRUD
+>>CREATE > insert a single data / multiple data
+>db.collectionName.insertMany([{},{},{}])
+    db.students.insertMany([
+        {
+            "name":"Ashish Vishwakarma",
+            "age":22,
+            "course":"MongoDB"
+        },
+        {
+            "name":"Dhanurdharan M",
+            "age":22,
+            "course":"MongoDB"
+        },
+        {
+            "name":"Durgadevi Vadakalur Krishnan",
+            "age":23,
+            "course":"MongoDB"
+        },
+        {
+            "name":"Shankar Laal",
+            "age":24,
+            "course":"MongoDB",
+            "location":"Chennai"
+        },
+        {
+            "name":"Pazhanivel V",
+            "age":25,
+            "course":"MongoDB"
+        },
+        {
+            "name":"Mohammed Ibrahim",
+            "age":26,
+            "course":"MongoDB",
+            "location":"Pune"
+        },
+        {
+            "name":"Tanmay Kaushik",
+            "age":27,
+            "course":"MongoDB"
+        },
+        {
+            "name":"SUDHA PANDEY",
+            "age":28,
+            "course":"MongoDB",            
+            "location":"Pondicherry"
+        }]   
+        );
+
+insert >> nested 
+db.students.insertOne({
+            "name":"Keyur Chawla",
+            "age":28,
+            "course":"MongoDB",            
+            "location":"Pondicherry",
+            address:{
+                "street":"Lane View",
+                "Flat No":"D-603",
+                "Pincode":"41100985"
+            }
+        });
+READ
+db.collectionName.find() >> READ ALL
+db.students.find()
+
+format the output 
+pretty()
+db.students.find().pretty()
+
+Constraints >> Do the constraints
+1- Find the student with location Pondicherry.
+db.students.find({"location":"Pondicherry"}) >> entired Document
+2- age -28
+db.students.find({"age":28})
+3- Find the studentName with location Pondicherry.
+projections >>db.students.find({where},{projections}) projections:0 0r 1 >> feildname :1
+db.students.find({"location":"Pondicherry"},{"name":1}) >> name + Object_id
+db.students.find({"location":"Pondicherry"},{"name":1,"location":1,"_id":0}) 
+
+//Comparision:
+$gt ,$lt , $gte ,$lte, $ne .................more opertaors
+2- age gt 28
+db.students.find({
+    "age":{$gt:28}
+})
+
+db.students.find({
+    "age":{$lt:28}
+})
+
+db.students.find({
+    "location":{$ne:"Pondicherry"}
+},{"location":1})
+
+$in >> includes >>[]
+
+db.students.find({
+    "location":{$in:["Pondicherry","Chennai","Pune"]}
+},{"location":1,"name":1,"_id":0})
+
+$nin >> not includes >>[]
+
+db.students.find({
+    "location":{$nin:["Pondicherry","Chennai","Pune"]}
+},{"location":1,"name":1,"_id":0})
+
+
+//  course: 'MongoDB-No SQL DB Inprogress',
+    location: 'Pondicherry',
+    db.students.find({
+        course: 'MongoDB-No SQL DB Inprogress',
+        location: 'Pondicherry'    
+},{"location":1,"name":1,"course":1,"_id":0})
+
+    db.students.find({
+        name:"aryan Chawla",
+        course: 'MongoDB-No SQL DB Inprogress',
+        location: 'Pondicherry'    
+},{"location":1,"name":1,"course":1,"_id":0})
+$and $or
+
+UpdateOne()
+db.collectionName.updateOne({where},{what}) >> what >> $set:{}
+ "name":"Keyur Chawla", >>"age":31
+ db.students.updateOne({"name":"Keyur Chawla"},{$set:{"age":31}});
+ db.students.updateMany({"name":"Keyur Chawla"},{$set:{"age":45}});
+
+ Add a new feild >> update it all;
+  db.students.updateMany({},{$set:{"class":"FSD_WE_B48"}});
+  db.students.updateMany({},{$set:{"class":"FSD_WE_B48","country":"India","emailIdPresent":"Yes"}});
+
+
+DELETE:
+deleteOne({what})
+    >>Archana Chawla
+    db.collectionName.deleteOne({what})
+    db.students.deleteOne({"name":"Archana Chawla"})
+deleteMany()
+    db.students.deleteMany({"name":"john Chawla"})
+    db.studnts.deleteMany({})  // remove all the Documents
+
+
+
+
