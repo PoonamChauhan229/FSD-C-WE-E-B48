@@ -6,15 +6,18 @@ const http=require('http')
 const server=http.createServer((req,res)=>{
     // res.write("Welcome to Node")
     // res.end()
+    // http://localhost:8000/
     if(req.url==="/"){
         res.write("Welcome to Home Page")
         res.end()
     }
+    // http://localhost:8000/about
     else if(req.url==="/about"){
         // simple text >> data+ business logics
         res.write("Welcome to About Page")
         res.end()
     }
+    // http://localhost:8000/*
     else{
          res.write("Page not found")
         res.end()
