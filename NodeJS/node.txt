@@ -1,0 +1,22 @@
+What is Node ?
+    >NodeJS is not a framework / language
+
+When we are going to learn here > Javascript
+    > NodeJS
+    >Runtime Enviornment
+
+VS code >> Enviornment to write our code
+Java >> IDE
+C/C++>> IDE
+
+JS >> runnning in browser 
+JS Engine 
+
+
+modules:
+inbulit modules >> no need of installations
+third party modules >> axios ...etc 
+
+filesystem
+CRUD >> files/folders
+fs
