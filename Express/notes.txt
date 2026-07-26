@@ -1,0 +1,59 @@
+Backend : Logical Builiding
+        : Business Logic
+        : Each & every thing done by us
+        : Build a Builiding - Only Engineer+Labour+Designer+Architect ()
+        : Heart of FE
+        : interesting
+
+Project Creation >>.............................>> Deployment
+
+CLI >> Terminal 
+
+Express : Framework
+React: library
+
+Framework Vs library
+
+Framework >> Deevloped by somebody & packed with n no. of features  >> set of rules >> Easier 
+A B C D >> correct order >> rules 
+C B A D >> incorrect order >> break the pattern
+
+Library >> JS (follow the Library + JS ) >> Flexible 
+
+
+Express >> Minimal & Flexible Framework of NODEJS
+        >> Build API + Routes + HTTP REQ.........
+
+Why Express ?
+Create a server + routes >> No Lenghty +Easy to Maintain
+
+
+>> Create a Project Folder >> 01ExpressProject
+>> initiliaze the project >> npm init || npm init -y
+
+01 >> type: cjs
+02 >> type : es
+03 >> default
+
+>> Usage Express & Install >> npm i Express
+        - package-lock.json + node_modules
+>> Creating a .gitignore file
+>> Create core file> index.js/server.js/main.js/app.js
+
+>> Minimaltstic Backend setup is done
+
+
+>> Creating a server >> http module(node)
+        >> express
+        >> start the server
+
+Server will be started
+
+>> Create the basic routes >> Home Page
+
+>> Project should start automatically >>npm i nodemon
+        >> npm run dev
+        >> package.json >>script
+                start-node server.js  -> npm start
+                dev-nodemon server.js -> npm run dev
+
