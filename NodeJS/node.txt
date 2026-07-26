@@ -20,3 +20,20 @@ third party modules >> axios ...etc
 filesystem
 CRUD >> files/folders
 fs
+
+
+Event Loop and Asynchronous Programming
+React >> NODE
+Using NPM & Managing Packages
+Using Third-Party Modules
+
+Callbacks, Promises & Async/Await   >> JS
+
+
+npm >> 
+
+
+ {
+ "type": "module" // import
+ "type":"cjs"   // commonjs
+  }
