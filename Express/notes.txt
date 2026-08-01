@@ -57,3 +57,29 @@ Server will be started
                 start-node server.js  -> npm start
                 dev-nodemon server.js -> npm run dev
 
+//modular >>
+//middleware
+//get method , other methods
+//error handling
+
+
+//modular >>
+
+app.get("/json", (req, res) => {
+    res.send({
+        "name": "test123",
+        "age": 34
+    })
+})
+
+/json >> routes
+()=>{} >>controllers
+get >> method
+
+//ecomm 
+products
+orders
+sales
+cart >>
+users  >>
+
