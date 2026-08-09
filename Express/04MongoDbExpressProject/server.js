@@ -2,8 +2,10 @@
 
 const express = require('express') // module
 const app = express()
-const PORT = 8000
 const movieRoute=require('./routes/movieRoute')// file 
+const dotenv=require('dotenv')
+dotenv.config() //file contents into process.env by default. If DOTENV_KEY is present, it smartly attempts to load encrypted .env.vault file contents into process.env.
+const PORT = process.env.PORT || 8000
 
 const dns=require('dns')
 dns.setServers(['8.8.8.8','8.8.4.4'])

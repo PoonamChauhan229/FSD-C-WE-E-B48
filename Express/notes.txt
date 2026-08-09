@@ -83,3 +83,10 @@ sales
 cart >>
 users  >>
 
+
+.env >> environment varibles
+Login creadentials
+API KEY
+SECRET KEY
+MONGO_URL
+
