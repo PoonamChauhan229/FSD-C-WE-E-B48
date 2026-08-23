@@ -1,0 +1,73 @@
+Data Ingestion
+    >>Raw Document (Text/PDF/Doc)-->Extract the Data ---->Chunking--->Embeddings---->Vector DB 
+    >>Raw Document (Text/PDF/Doc) --> multer package
+    https://www.npmjs.com/package/multer
+    >>
+
+    Controller >> rag.controller.js
+    
+    >> Extract the data >> pdfservice.js
+    extractTextFromPDF() >>PDFParse,fs module --> nodejs 
+    core node module
+    https://www.npmjs.com/package/pdf-parse
+
+    >>Chunking 
+        https://docs.langchain.com/oss/javascript/integrations/splitters
+
+        https://docs.langchain.com/oss/javascript/integrations/splitters/recursive_text_splitter
+
+        >>langchain
+        splitText() >> RecursiveCharacterTextSplitter -- langchain >> chunkservice.js
+
+    
+    >> Embeddings:
+        https://docs.langchain.com/oss/javascript/integrations/embeddings#google-gemini
+
+        npm install @langchain/google-genai @langchain/core
+
+        Create API Key >> Google AI Studio
+        https://aistudio.google.com/app/apikey
+
+        generateEmbedding() >>gemini-embedding-001
+    incase get the list of models >> test.js file
+
+    >> Store Embeddings+ Data >> Vector DB
+        DB >> Vector DB >>Mongodb
+        >>connection DB
+        >>create model >> schema >> Document.model.js
+        storeChunks()
+        show the response
+    
+
+User Query
+Query/Question>> Search in Vector DB (Embeddings)>> 
+
+Query >> User >>Embeddings
+Search >> searchservice.js
+
+multer >> upload in nodejs app
+
+
+hello                  ---- [hello,world,you]
+hello(JL->ghgh)        ----[hghg,ghgh,ghgh](Japan language)
+
+
+Mongodb >> collection >> create Index
+
+{
+  "fields": [
+    {
+      "type": "vector",
+      "path": "embedding",
+      "numDimensions": 3072,
+      "similarity": "cosine"
+    }
+  ]
+}
+
+
+//serach performed >> result >>5 responses
+
+
+ 
+

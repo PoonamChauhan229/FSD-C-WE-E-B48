@@ -1,0 +1,16 @@
+npm init -y
+npm install express mongoose dotenv cors multer pdf-parse @google/genai @langchain/textsplitters nodemon
+
+http://localhost:5000/api/rag/upload
+
+Body
+
+form-data
+
+Key
+
+pdf
+
+Type
+
+File
